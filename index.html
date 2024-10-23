@@ -133,10 +133,17 @@
                 return 'Metasploit is a framework for developing and executing exploit code against a remote target.';
             } else if (lowerInput.includes('burp suite')) {
                 return 'Burp Suite is a popular tool for web application security testing.';
-            } else if (lowerInput.includes('techniques')) {
+            } else if (lowerInput.includes('hacking tools')) {
+                return 'Common hacking software includes Nmap, Wireshark, Metasploit, and Burp Suite.';
+            } else if (lowerInput.includes('hacking languages')) {
+                return 'Popular languages for hacking include Python, JavaScript, Ruby, and Bash scripting.';
+            } else if (lowerInput.includes('hacking techniques')) {
                 return 'Common hacking techniques include phishing, SQL injection, and social engineering.';
-            } else {
-                return 'I\'m sorry, I don\'t have information on that. Try asking about Nmap, Wireshark, Metasploit, or Burp Suite.';
+            }else if (lowerInput.includes('hacking basics')){
+                return'Some Basics Hacking are Networking,Operating System,Programming skills ,web technologies,security concepts,vulnerability assessment.';
+            } 
+            else {
+                return 'I\'m sorry, I don\'t have information on that. Try asking about Nmap, Wireshark, Metasploit, Burp Suite, hacking software, or languages.';
             }
         }
     </script>
