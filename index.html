@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Hacking Tools</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Simple styles for the chatbot */
+        #chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #fff;
+        }
+        #chatbot-header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        #chatbot-messages {
+            height: 200px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+        #user-input {
+            padding: 10px;
+            border: none;
+            width: 80%;
+        }
+        #send-button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Hacking Tools 101</h1>
+        <nav>
+            <ul>
+                <li><a href="#tools">Hacking Tools</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tools">
+            <h2>Popular Hacking Tools</h2>
+            <ul>
+                <li><strong>Nmap:</strong> A network scanning tool for discovering hosts and services.</li>
+                <li><strong>Wireshark:</strong> A network protocol analyzer that allows users to capture and interactively browse traffic.</li>
+                <li><strong>Metasploit:</strong> A penetration testing framework that helps find and exploit vulnerabilities.</li>
+                <li><strong>Burp Suite:</strong> A platform for security testing of web applications.</li>
+            </ul>
+        </section>
+
+        <section id="resources">
+            <h2>Learning Resources</h2>
+            <p>Here are some recommended resources to start learning about hacking:</p>
+            <ul>
+                <li><a href="https://www.hacker101.com" target="_blank">Hacker101</a></li>
+                <li><a href="https://www.tryhackme.com" target="_blank">TryHackMe</a></li>
+                <li><a href="https://www.cybrary.it" target="_blank">Cybrary</a></li>
+                <li><a href="https://www.udemy.com" target="_blank">Udemy Courses</a></li>
+            </ul>
+        </section>
+
+        <section id="about">
+            <h2>About This Site</h2>
+            <p>This site is dedicated to educating individuals about hacking tools and techniques in a responsible manner. Hacking can be a powerful skill when used ethically.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hacking Tools 101</p>
+    </footer>
+
+    <div id="chatbot">
+        <div id="chatbot-header">Chatbot</div>
+        <div id="chatbot-messages"></div>
+        <input type="text" id="user-input" placeholder="Ask me about hacking tools...">
+        <button id="send-button">Send</button>
+    </div>
+
+    <script>
+        const messagesContainer = document.getElementById('chatbot-messages');
+        const userInput = document.getElementById('user-input');
+        const sendButton = document.getElementById('send-button');
+
+        sendButton.addEventListener('click', () => {
+            const userMessage = userInput.value;
+            if (userMessage) {
+                appendMessage('You: ' + userMessage);
+                const botResponse = getBotResponse(userMessage);
+                appendMessage('Bot: ' + botResponse);
+                userInput.value = '';
+            }
+        });
+
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendButton.click();
+            }
+        });
+
+        function appendMessage(message) {
+            const messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            messagesContainer.appendChild(messageElement);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight; // Scroll to the bottom
+        }
+
+        function getBotResponse(input) {
+            const lowerInput = input.toLowerCase();
+            if (lowerInput.includes('nmap')) {
+                return 'Nmap is used for network discovery and security auditing.';
+            } else if (lowerInput.includes('wireshark')) {
+                return 'Wireshark lets you capture and analyze the data traveling back and forth on your network.';
+            } else if (lowerInput.includes('metasploit')) {
+                return 'Metasploit is a framework for developing and executing exploit code against a remote target.';
+            } else if (lowerInput.includes('burp suite')) {
+                return 'Burp Suite is a popular tool for web application security testing.';
+            } else if (lowerInput.includes('techniques')) {
+                return 'Common hacking techniques include phishing, SQL injection, and social engineering.';
+            } else {
+                return 'I\'m sorry, I don\'t have information on that. Try asking about Nmap, Wireshark, Metasploit, or Burp Suite.';
+            }
+        }
+    </script>
+</body>
+</html>
