@@ -46,7 +46,7 @@
 <body>
     <header>
         <h1>Welcome to Pranesh Hacking Tutorial</h1>
-        <h5>Reg no:2023503309</h5>
+        <h1>Reg no:2023503309</h1>
         <nav>
             <ul>
                 <li><a href="#tools">Department Computer Technology</a></li>
@@ -70,17 +70,21 @@
             <h2>Learning Resources</h2>
             <p>Here are some recommended resources to start learning about hacking:</p>
             <ul>
+                 <li><a href="https://maps.app.goo.gl/uBavSJ8LmjqQrBrh8" target="_blank">School</a></li>
                 <li><a href="https://www.hacker101.com" target="_blank">Hacker101</a></li>
                 <li><a href="https://www.tryhackme.com" target="_blank">TryHackMe</a></li>
                 <li><a href="https://www.cybrary.it" target="_blank">Cybrary</a></li>
                 <li><a href="https://www.udemy.com" target="_blank">Udemy Courses</a></li>
                 <li><a href="https://maps.app.goo.gl/BTt83ccDJmzNBg1P8"target="_blank">Tutorial location</a></li>
-    
+                <li><a href="https://maps.app.goo.gl/uBavSJ8LmjqQrBrh8" target="_blank">School</a></li>
             </ul>
         </section>
+            <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:praneshrangasmy2006@gmail.com">praneshrangasmy2006@gmail.com</a></p>
+             <p>Phone:<a href="callto:6379749113>Contact Number</a></p>   
+        </section>
 
-        <section id="about">
-            <h2>About This Site</h2>
             <p>This site is dedicated to educating individuals about hacking tools and techniques in a responsible manner. Hacking can be a powerful skill when used ethically.</p>
         </section>
     </main>
@@ -144,8 +148,9 @@
                 return'Some Basics Hacking are Networking,Operating System,Programming skills ,web technologies,security concepts,vulnerability assessment.';
             } else if (lowerInput.includes('tell about me')){
                 return'My self Pranesh,I have completed my school in svm hr.sec gurusamipalayam,completed diploma in computer technology at muthayammal polytechnic college rasipuram,now currently pursing BE in MIT Anna university chennai.';
-            }
-            else {
+            }else if (lowerInput.includes('hi')){
+                return'hi';
+            } else {
                 return 'I\'m sorry, I don\'t have information on that. Try asking about Nmap, Wireshark, Metasploit, Burp Suite, hacking software, or languages.';
             }
         }
