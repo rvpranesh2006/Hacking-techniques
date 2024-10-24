@@ -6,6 +6,7 @@
     <title>Learn Hacking Tools</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Existing styles */
         #chatbot {
             position: fixed;
             bottom: 20px;
@@ -41,6 +42,15 @@
             border: none;
             cursor: pointer;
         }
+        /* New styles for the image */
+        #corner-image {
+            position: fixed;
+            top: 20px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
+            width: 100px; /* Adjust the size as needed */
+            height: auto; /* Keep the aspect ratio */
+            z-index: 1000; /* Ensure it's above other elements */
+        }
     </style>
 </head>
 <body>
@@ -51,42 +61,44 @@
             <ul>
                 <li><a href="#tools">Department Computer Technology</a></li>
                 <b>MADRAS INSTITUTE OF TECHNOLOGY</b>
-                 
+            </ul>
         </nav>
     </header>
+
+    <!-- Add your image here -->
+    <img id="corner-image" src="pranesh.jpg" alt="PHOTO">
 
     <main>
         <section id="resources">
             <h2>Learning Resources about me</h2>
             <ul>
-                 <li><a href="https://maps.app.goo.gl/uBavSJ8LmjqQrBrh8" target="_blank">School</a></li>
+                <li><a href="https://maps.app.goo.gl/uBavSJ8LmjqQrBrh8" target="_blank">School</a></li>
                 <li><a href="https://www.mptco.in/" target="_blank">DIPLOMA</a></li>
-             <p>Here are some recommended resources to start learning about hacking:</p>
+                <p>Here are some recommended resources to start learning about hacking:</p>
                 <li><a href="https://www.hacker101.com" target="_blank">Hacker101</a></li>
                 <li><a href="https://www.tryhackme.com" target="_blank">TryHackMe</a></li>
                 <li><a href="https://www.cybrary.it" target="_blank">Cybrary</a></li>
                 <li><a href="https://www.udemy.com" target="_blank">Udemy Courses</a></li>
-                <li><a href="https://maps.app.goo.gl/BTt83ccDJmzNBg1P8"target="_blank">Tutorial location</a></li>
+                <li><a href="https://maps.app.goo.gl/BTt83ccDJmzNBg1P8" target="_blank">Tutorial location</a></li>
                 <li><a href="https://maps.app.goo.gl/uBavSJ8LmjqQrBrh8" target="_blank">School</a></li>
             </ul>
             <section id="tools">
-            <h2>Popular Hacking Tools</h2>
-            <ul>
-                <li><strong>Nmap:</strong> A network scanning tool for discovering hosts and services.</li>
-                <li><strong>Wireshark:</strong> A network protocol analyzer that allows users to capture and interactively browse traffic.</li>
-                <li><strong>Metasploit:</strong> A penetration testing framework that helps find and exploit vulnerabilities.</li>
-                <li><strong>Burp Suite:</strong> A platform for security testing of web applications.</li>
-            </ul>
+                <h2>Popular Hacking Tools</h2>
+                <ul>
+                    <li><strong>Nmap:</strong> A network scanning tool for discovering hosts and services.</li>
+                    <li><strong>Wireshark:</strong> A network protocol analyzer that allows users to capture and interactively browse traffic.</li>
+                    <li><strong>Metasploit:</strong> A penetration testing framework that helps find and exploit vulnerabilities.</li>
+                    <li><strong>Burp Suite:</strong> A platform for security testing of web applications.</li>
+                </ul>
+            </section>
         </section>
-        </section>
-            <section id="contact">
+        <section id="contact">
             <h2>Contact Me</h2>
             <p>Email: <a href="mailto:praneshrangasmy2006@gmail.com">praneshrangasmy2006@gmail.com</a></p>
-             <p>Phone:6379749113</p>   
+            <p>Phone: 6379749113</p>   
         </section>
 
-            <p>This site is dedicated to educating individuals about hacking tools and techniques in a responsible manner. Hacking can be a powerful skill when used ethically.</p>
-        </section>
+        <p>This site is dedicated to educating individuals about hacking tools and techniques in a responsible manner. Hacking can be a powerful skill when used ethically.</p>
     </main>
 
     <footer>
@@ -144,14 +156,14 @@
                 return 'Popular languages for hacking include Python, JavaScript, Ruby, and Bash scripting.';
             } else if (lowerInput.includes('hacking techniques')) {
                 return 'Common hacking techniques include phishing, SQL injection, and social engineering.';
-            }else if (lowerInput.includes('hacking basics')){
-                return'Some Basics Hacking are Networking,Operating System,Programming skills ,web technologies,security concepts,vulnerability assessment.';
-            } else if (lowerInput.includes('tell about me')){
-                return'My self Pranesh,I have completed my school in svm hr.sec gurusamipalayam,completed diploma in computer technology at muthayammal polytechnic college rasipuram,now currently pursing BE in MIT Anna university chennai.';
-            }else if (lowerInput.includes('hi')){
-                return'hi';
-            } else if (lowerInput.includes('CONTACT')){
-                retrun'Mail id:praneshrangasamy2006@gmail.com Contact Number:6379749113';
+            } else if (lowerInput.includes('hacking basics')) {
+                return 'Some Basics Hacking are Networking, Operating System, Programming skills, web technologies, security concepts, vulnerability assessment.';
+            } else if (lowerInput.includes('tell about me')) {
+                return 'Myself Pranesh, I have completed my school in SVM HR Sec Gurusamipalayam, completed diploma in computer technology at Muthayammal Polytechnic College Rasipuram, now currently pursuing BE in MIT Anna University Chennai.';
+            } else if (lowerInput.includes('hi')) {
+                return 'Hi!';
+            } else if (lowerInput.includes('contact')) {
+                return 'Mail id: praneshrangasamy2006@gmail.com, Contact Number: 6379749113';
             } else {
                 return 'I\'m sorry, I don\'t have information on that. Try asking about Nmap, Wireshark, Metasploit, Burp Suite, hacking software, or languages.';
             }
