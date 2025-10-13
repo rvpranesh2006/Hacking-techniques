@@ -134,8 +134,8 @@
     </footer>
   </div>
 
-  <!-- Portfolio Chat Assistant -->
-  <div id="chatbot" aria-live="polite" role="dialog" aria-label="Portfolio assistant">
+  <!-- Portfolio Assistant -->
+  <div id="chatbot">
     <div id="chatbot-header">Portfolio Assistant</div>
     <div id="chatbot-messages"></div>
     <div id="chatbot-controls">
@@ -165,10 +165,10 @@
 
     function getBotResponse(input) {
       const t = input.toLowerCase();
-      if (t.includes('project')) return "I’ve built Zero Trash, Inventory System, Finance Tracker, and Fake Review Detector — all listed in the Projects section!";
+      if (t.includes('project')) return "I've built Zero Trash, Inventory System, Finance Tracker, and Fake Review Detector — all listed in the Projects section!";
       if (t.includes('skill')) return "I work with Java, C, Python, HTML, CSS, TypeScript, MongoDB, and MySQL.";
       if (t.includes('contact')) return "You can email me at praneshrangasamy2006@gmail.com or call +91 63797 49113.";
-      if (t.includes('education')) return "Currently pursuing B.E. CSE at MIT, after completing my Diploma in Computer Engineering.";
+      if (t.includes('education')) return "Currently pursuing B.E. CSE at MIT after completing my Diploma in Computer Engineering.";
       if (t.includes('internship')) return "I completed my internship at MEE-Technology (Remote) in 2023.";
       if (t.includes('achievement')) return "I ranked among top Diploma scorers in TN and earned certifications in Hardware Servicing.";
       if (t.includes('hi') || t.includes('hello')) return "Hello! I'm the portfolio assistant — ask about projects, skills, or achievements.";
@@ -192,3 +192,4 @@
   </script>
 </body>
 </html>
+
