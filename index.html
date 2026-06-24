@@ -47,6 +47,54 @@
     .nav-links a { font-size: 13px; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; transition: color 0.2s; }
     .nav-links a:hover { color: var(--cyan); text-decoration: none; }
 
+    /* HERO PHOTO */
+    .hero-photo-wrap {
+      position: absolute;
+      top: 50%;
+      right: 10vw;
+      transform: translateY(-50%);
+      z-index: 2;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.5s forwards;
+    }
+    .hero-photo {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--navy);
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-photo-ring {
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      z-index: 0;
+      box-shadow: 0 0 40px rgba(0,212,255,0.3), 0 0 80px rgba(124,111,255,0.15);
+    }
+    .hero-photo-wrap .hero-photo {
+      position: relative;
+      z-index: 2;
+      margin: 5px;
+      width: 230px;
+      height: 230px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media (max-width: 900px) {
+      .hero-photo-wrap {
+        position: static;
+        transform: none;
+        margin-bottom: 28px;
+        width: 130px;
+        height: 130px;
+      }
+      .hero-photo { width: 120px; height: 120px; margin: 5px; }
+      .hero-photo-wrap .hero-photo { width: 120px; height: 120px; }
+    }
+
     /* HERO */
     #hero {
       min-height: 100vh; display: flex; flex-direction: column;
@@ -277,6 +325,10 @@
 
 <!-- HERO -->
 <section id="hero">
+  <div class="hero-photo-wrap">
+    <div class="hero-photo-ring"></div>
+    <img src="pranesh.jpg" alt="R V Pranesh" class="hero-photo" onerror="this.style.display='none'" />
+  </div>
   <p class="hero-eyebrow">// Hello, World! Welcome to my space</p>
   <h1 class="hero-name">R V <span>Pranesh</span></h1>
   <p class="hero-tagline">B.E. Computer Science &amp; Engineering student at Madras Institute of Technology — building real things with code.</p>
